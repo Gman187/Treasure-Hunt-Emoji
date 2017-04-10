@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PFh-dW-pxk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Treasure_Hunt_Emoji" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Treasure_Hunt_Emoji" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,13 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hMC-to-VM7">
-                                <rect key="frame" x="0.0" y="18" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="18" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pUM-LU-u0K">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="baG-hj-hM4">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableView>
                                         </subviews>
@@ -45,18 +45,20 @@
                             <constraint firstItem="hMC-to-VM7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rSm-Et-cXb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="22y-9V-McQ"/>
                     <connections>
                         <outlet property="emojitableview" destination="baG-hj-hM4" id="neb-0s-PFR"/>
+                        <segue destination="iyw-wj-U1Z" kind="show" identifier="moveSegue" id="7d8-BX-7yp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="128.18590704647679"/>
+            <point key="canvasLocation" x="860" y="128.18590704647679"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="uFG-Fn-fAl">
             <objects>
-                <viewController id="iyw-wj-U1Z" sceneMemberID="viewController">
+                <viewController id="iyw-wj-U1Z" customClass="DefinitionViewController" customModule="Treasure_Hunt_Emoji" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eux-zI-LMb"/>
                         <viewControllerLayoutGuide type="bottom" id="EBa-BT-QOE"/>
@@ -72,7 +74,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely Church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jw-EW-97e">
-                                <rect key="frame" x="100" y="294" width="171" height="79"/>
+                                <rect key="frame" x="100" y="338" width="171" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,10 +90,32 @@
                             <constraint firstItem="3Jw-EW-97e" firstAttribute="centerX" secondItem="sA4-Dj-stE" secondAttribute="centerX" constant="-2" id="toi-wX-eKk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="3Jw-EW-97e" id="grO-Ix-pIc"/>
+                        <outlet property="emojiLabel" destination="iqS-5z-Thj" id="ztD-Gf-vur"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDk-bU-NgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="129.98500749625188"/>
+            <point key="canvasLocation" x="1527.2" y="129.98500749625188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tOU-1e-bsJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PFh-dW-pxk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Byn-NO-IPf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cEm-wY-rXP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Kx-0T-whl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="128.18590704647679"/>
         </scene>
     </scenes>
 </document>
