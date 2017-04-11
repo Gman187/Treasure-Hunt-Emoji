@@ -73,8 +73,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely Church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jw-EW-97e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a lovely Church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jw-EW-97e">
                                 <rect key="frame" x="100" y="338" width="171" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category: Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tj-4K-Cy2">
+                                <rect key="frame" x="100" y="374" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BirthYear: 2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5n-1W-IGr">
+                                <rect key="frame" x="100" y="407" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -82,15 +97,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3Jw-EW-97e" firstAttribute="centerY" secondItem="sA4-Dj-stE" secondAttribute="centerY" id="F2n-0v-RXG"/>
-                            <constraint firstItem="3Jw-EW-97e" firstAttribute="centerX" secondItem="sA4-Dj-stE" secondAttribute="centerX" constant="-2" id="Kp2-25-yKh"/>
-                            <constraint firstItem="3Jw-EW-97e" firstAttribute="top" secondItem="Eux-zI-LMb" secondAttribute="bottom" constant="274" id="Rmg-yg-YOo"/>
                             <constraint firstItem="iqS-5z-Thj" firstAttribute="leading" secondItem="sA4-Dj-stE" secondAttribute="leadingMargin" constant="80" id="XjL-0s-TY7"/>
                             <constraint firstItem="EBa-BT-QOE" firstAttribute="top" secondItem="iqS-5z-Thj" secondAttribute="bottom" constant="431" id="bCl-or-Fyn"/>
-                            <constraint firstItem="3Jw-EW-97e" firstAttribute="centerX" secondItem="sA4-Dj-stE" secondAttribute="centerX" constant="-2" id="toi-wX-eKk"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthYearLabel" destination="R5n-1W-IGr" id="iyM-Pd-vB3"/>
+                        <outlet property="categoryLabel" destination="6tj-4K-Cy2" id="xLB-az-6wV"/>
                         <outlet property="definitionLabel" destination="3Jw-EW-97e" id="grO-Ix-pIc"/>
                         <outlet property="emojiLabel" destination="iqS-5z-Thj" id="ztD-Gf-vur"/>
                     </connections>
